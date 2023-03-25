@@ -1,0 +1,48 @@
+{% extends "page_layout.html" %}
+{% block title %}Keyword Rank Updater{% endblock %}
+
+{% block body %}
+<script>
+  const submitBtn = document.getElementById('submit-btn');
+
+submitBtn.addEventListener('click', function() {
+  // add code to change the button to a loader here
+});
+
+
+submitBtn.addEventListener('click', function() {
+  // create a new loader element
+  const loader = document.createElement('div');
+  loader.classList.add('loader');
+
+  // replace the button's text with the loader
+  submitBtn.innerHTML = '';
+  submitBtn.appendChild(loader);
+});
+
+
+
+  </script>
+
+    <div class="container-flued" id="main_container">
+      <div class="container-md" id="upload_container">
+        <h1>Keyword Rank Updater</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+
+          <label for="upload_row_file" id="file_lable">Upload Row CSV File</label>
+            <select class="form-control" name="project_name">
+                {% for project in project_list %}
+                <option value="{{project}}">{{project}}</option>
+                {% endfor %}
+</select>
+
+        <input class="form-control"name = "upload_row_file" id ="file" type="file"  required>
+        <button  class="btn btn-lg btn-primary" type="submit" id="submit_btn">Upload</button>
+        </form>
+        
+      </div>
+    </div>
+{% endblock %}
+
+
+</html>

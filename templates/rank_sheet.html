@@ -1,0 +1,15 @@
+{% extends "page_layout.html" %}
+{% block title %}Keyword Rank Data Updated{% endblock %}
+  {% block body %}
+    <div class="container-flued" id="main_container">
+      <div class="container-md" id="upload_container">
+       <h1>All Rank Sheet Links</h1>
+       <ul>
+        {% for key,value in project_dict.items() %}
+        <li><a href = "{{ value }}" target="_blank"><button class="btn btn-success project_btn">{{ key }}</button></a></li>
+           {% endfor %}
+       </ul>
+      </div>
+    </div>
+{% endblock %}
+</html>

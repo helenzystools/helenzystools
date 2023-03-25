@@ -1,0 +1,24 @@
+{% extends "page_layout.html" %}
+{% block title %}Keyword Rank Updater{% endblock %}
+
+{% block body %}
+ <div class="container-flued" id="main_container">
+      <div class="container-md" id="upload_container">
+       <h1>Add Project</h1>
+       <form id="add_project" action="/add_success" method = "post" enctype="multipart/form-data">
+        <div class="form-row" id="form_input">
+          <div class="form-group">
+            <label for="project_name">Project Name</label>
+            <input type="text" class="form-control" id="project_name" name="project_name" placeholder="Project Name">
+
+
+          </div>
+
+          
+        </div>
+       
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+      </div>
+    </div>
+{% endblock %}
