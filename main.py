@@ -294,4 +294,4 @@ if __name__ == "__main__":
     cwd = (os.getcwd())
     uploader_folder = os.path.join(cwd, "/static/upload_files/")
     app.config['UPLOAD_FOLDER'] = uploader_folder
-    app.run(debug=True)
+    app.run(debug=False,host='0.0.0.0')
